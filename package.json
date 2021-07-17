@@ -1,6 +1,6 @@
 {
   "name": "@vennet/ui-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "build/index.js",
   "module": "build/index.es.js",
   "files": [
@@ -75,5 +75,10 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.6",
     "ts-jest": "^27.0.3"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/vennet-developers/ui-kit/issues"
+  },
+  "homepage": "https://github.com/HarveyD/react-component-library#readme",
+  "description": ""
 }
