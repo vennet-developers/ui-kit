@@ -10,7 +10,7 @@
   "types": "build/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HarveyD/react-component-library.git"
+    "url": "git+https://github.com/vennet-developers/ui-kit.git"
   },
   "keywords": [
     "React",
@@ -79,6 +79,6 @@
   "bugs": {
     "url": "https://github.com/vennet-developers/ui-kit/issues"
   },
-  "homepage": "https://github.com/HarveyD/react-component-library#readme",
+  "homepage": "https://github.com/vennet-developers/ui-kit.git#readme",
   "description": ""
 }
