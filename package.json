@@ -30,7 +30,8 @@
     "test": "jest --env=jsdom",
     "test:watch": "jest --watch --env=jsdom",
     "prePublishOnly": "yarn build",
-    "prettier": "prettier --config .prettierrc './src/**/*.{ts,tsx}' --write",
+    "prettier": "prettier --write src/**/*.{js,ts,tsx,scss}",
+    "prettier:check": "prettier --list-different src/**/*.{js,ts,tsx,scss}",
     "lint": "eslint . --ext ts"
   },
   "husky": {
