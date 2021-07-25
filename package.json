@@ -1,6 +1,6 @@
 {
   "name": "@vennet/ui-kit",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "build/index.js",
   "module": "build/index.es.js",
   "files": [
@@ -10,7 +10,7 @@
   "types": "build/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HarveyD/react-component-library.git"
+    "url": "git+https://github.com/vennet-developers/ui-kit.git"
   },
   "keywords": [
     "React",
@@ -30,13 +30,23 @@
     "test": "jest --env=jsdom",
     "test:watch": "jest --watch --env=jsdom",
     "prePublishOnly": "yarn build",
-    "version:patch": "npm version patch --no-git-tag-version",
-    "version:minor": "npm version minor --no-git-tag-version",
-    "version:major": "npm version major --no-git-tag-version"
+    "prettier": "prettier --write src/**/*.{js,ts,tsx,scss}",
+    "prettier:check": "prettier --list-different src/**/*.{js,ts,tsx,scss}",
+    "lint": "eslint . --ext tsx",
+    "version:patch": "npm version patch",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prettier",
+      "pre-push": ""
+    }
   },
   "peerDependencies": {
     "react": ">=17.0.2",
-    "react-dom": ">=17.0.2"
+    "react-dom": ">=17.0.2",
+    "styled-components": ">=5.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -51,13 +61,27 @@
     "@storybook/manager-webpack5": "^6.3.4",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.3.4",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@types/jest": "^26.0.24",
     "@types/react": "^17.0.14",
+    "@types/styled-components": "^5.1.11",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
     "css-loader": "^5.2.6",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^7.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.6",
     "node-sass": "^6.0.1",
     "postcss": "^8.3.5",
     "postcss-cli": "^8.3.1",
+    "prettier": "^2.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rollup": "^2.53.0",
@@ -68,15 +92,18 @@
     "rollup-plugin-typescript2": "^0.30.0",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.1.0",
+    "styled-components": "^5.3.0",
+    "ts-jest": "^27.0.3",
     "typescript": "^4.3.5",
     "webpack": "^5.44.0"
   },
+  "bugs": {
+    "url": "https://github.com/vennet-developers/ui-kit/issues"
+  },
+  "homepage": "https://github.com/vennet-developers/ui-kit.git#readme",
+  "description": "",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@types/jest": "^26.0.24",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.0.6",
-    "ts-jest": "^27.0.3"
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-react": "^7.21.5"
   }
 }

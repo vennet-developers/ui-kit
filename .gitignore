@@ -1,5 +1,6 @@
 node_modules
 build
+.vscode
 .idea
 .idea/**/*
-.vscode
+yarn-error.log

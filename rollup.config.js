@@ -9,19 +9,20 @@ import { terser } from "rollup-plugin-terser";
 const packageJson = require("./package.json");
 
 export default {
-  input: "src/index.ts",
+  input: ["src/Button/Button.tsx"],
   output: [
     {
-      file: packageJson.main,
+      dir: "build",
       format: "cjs",
       sourcemap: true
     },
     {
-      file: packageJson.module,
+      dir: "build/module",
       format: "esm",
       sourcemap: true
     }
   ],
+  preserveModules: true,
   plugins: [
     terser(),
     peerDepsExternal(),
