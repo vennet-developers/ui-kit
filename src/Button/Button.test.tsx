@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { Button, IButtonProps } from './Button';
+import Button from './Button';
+import { IButtonProps } from './Button.definitions';
 
 describe('Button Component', () => {
   let props: IButtonProps;

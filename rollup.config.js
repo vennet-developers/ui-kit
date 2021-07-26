@@ -9,7 +9,7 @@ import tsTreeshaking from 'rollup-plugin-ts-treeshaking';
 const packageJson = require("./package.json");
 
 export default {
-  input: ["src/Button/Button.tsx"],
+  input: ["src/index.ts", "src/Button/index.ts"],
   output: [
     {
       dir: "build",
