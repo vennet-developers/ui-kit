@@ -1,2 +1,2 @@
-import { Button } from "./Button";
-export default Button;
+import { Button, IButtonProps } from "./Button";
+export { Button, IButtonProps };
