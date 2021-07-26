@@ -1,12 +1,8 @@
-import React, { FC, ComponentPropsWithoutRef } from 'react';
+import React, { FC } from 'react';
+import { IButtonProps } from './Button.definitions';
 import { StyledButton } from './Button.styled';
 
-export interface IButtonProps extends ComponentPropsWithoutRef<'button'> {
-  variant?: 'primary' | 'secondary' | 'icon';
-  elevation?: number;
-}
-
-export const Button: FC<IButtonProps> = ({
+const Button: FC<IButtonProps> = ({
   variant = 'primary',
   elevation = 1.5,
   children,
@@ -14,3 +10,5 @@ export const Button: FC<IButtonProps> = ({
 }) => {
   return <StyledButton {...props}>{children}</StyledButton>;
 };
+
+export default Button;
