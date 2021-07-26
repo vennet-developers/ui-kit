@@ -5,6 +5,7 @@ import typescript from "rollup-plugin-typescript2";
 import postcss from "rollup-plugin-postcss";
 import copy from "rollup-plugin-copy";
 import { terser } from "rollup-plugin-terser";
+import tsTreeshaking from 'rollup-plugin-ts-treeshaking';
 
 const packageJson = require("./package.json");
 
@@ -29,6 +30,7 @@ export default {
     resolve(),
     commonjs(),
     typescript({ useTsconfigDeclarationDir: true }),
+    tsTreeshaking(),
     postcss(),
     copy({
       targets: [
