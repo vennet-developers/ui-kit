@@ -1,0 +1,24 @@
+.vennet-button {
+  background-color: #0074D9;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: rgb(185, 185, 185);
+    cursor: pointer;
+  }
+
+  .heading {
+    font-size: 64px;
+  }
+
+  &.secondary {
+    background-color: #CCCCCC;
+    color: black;
+  }
+}

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { IButtonProps } from './Button.definitions';
-import { StyledButton } from './Button.styled';
+import './Button.scss';
 
 const Button: FC<IButtonProps> = ({
   variant = 'primary',
@@ -8,7 +8,11 @@ const Button: FC<IButtonProps> = ({
   children,
   ...props
 }) => {
-  return <StyledButton {...props}>{children}</StyledButton>;
+  return (
+    <button className={`vennet-button ${variant}`} {...props}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;
